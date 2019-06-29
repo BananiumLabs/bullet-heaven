@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: e8ab9f86a374c0a42bb8ddd4868e860a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Wrocislaw
+  fontNames:
+  - Wrocislaw
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 991af987c967b8b469a7685589a4e4bd, type: 3}
+  - {fileID: 12800000, guid: 12e1ab6a29eb3c14b92f921ab887123c, type: 3}
+  - {fileID: 12800000, guid: 260a09ebbe74d9d41a501032ca6b4e47, type: 3}
+  - {fileID: 12800000, guid: 3c63432edb4bd284aaa983d5d9b08dc1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,376 @@
+fileFormatVersion: 2
+guid: 5813b5df02317f24e9ad3fa92d4b1911
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1506130134754985581
+    second: BulletHeavenPlayer_SpriteSheet_0
+  - first:
+      213: 7785100464177238002
+    second: BulletHeavenPlayer_SpriteSheet_1
+  - first:
+      213: -7195940453834158658
+    second: BulletHeavenPlayer_SpriteSheet_2
+  - first:
+      213: -7823568377269860357
+    second: BulletHeavenPlayer_SpriteSheet_3
+  - first:
+      213: 5617783278431791446
+    second: BulletHeavenPlayer_SpriteSheet_4
+  - first:
+      213: -3361086161388904091
+    second: BulletHeavenPlayer_SpriteSheet_5
+  - first:
+      213: -8952588416498769429
+    second: BulletHeavenPlayer_SpriteSheet_6
+  - first:
+      213: -5659585032740145719
+    second: BulletHeavenPlayer_SpriteSheet_7
+  - first:
+      213: 445232765615717255
+    second: BulletHeavenPlayer_SpriteSheet_8
+  - first:
+      213: 3119100481630113823
+    second: BulletHeavenPlayer_SpriteSheet_9
+  - first:
+      213: -7755867676808737445
+    second: BulletHeavenPlayer_SpriteSheet_10
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 22
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0c0e23265ade144910950db4c37843
+      internalID: 1506130134754985581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 9
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a62f6f8079ab4343a1da7fd61626974
+      internalID: 7785100464177238002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 25
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb5753d6025fd0469cfa83fb1d5eb7d
+      internalID: -7195940453834158658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 16
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d799a3fe1c8f245a6a189df3e33fd5
+      internalID: -7823568377269860357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 31
+        width: 52
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821e2babe8f0bcb45ba0347fe15a47eb
+      internalID: 5617783278431791446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 31
+        width: 78
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0601dbf1cde89e340b365dee67f99342
+      internalID: -3361086161388904091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 25
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3325632adc9c24f9ac69c89e48a9f3
+      internalID: -8952588416498769429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 16
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31bb270120317e4abce1ff0c71a47bd
+      internalID: -5659585032740145719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 22
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9b4ec368a7d3140aaa5e2f15a6fa1c
+      internalID: 445232765615717255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 9
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928516212e0ccba4da867d2003e94da4
+      internalID: 3119100481630113823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletHeavenPlayer_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 24
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1763ddc9040b6c84db7111011ec5a788
+      internalID: -7755867676808737445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 95277dabb3f658f49868ebe41937515a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
