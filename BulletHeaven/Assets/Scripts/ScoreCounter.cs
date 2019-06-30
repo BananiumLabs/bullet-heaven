@@ -7,7 +7,7 @@ public class ScoreCounter : MonoBehaviour
 {
     private int health, halos, previousHealth, previousHalos;
     public Text current, allTime, bounty;
-    public static float Score, AllTimeScore, EnemiesKilled, Bounty;
+    public static float Score = 0, AllTimeScore = 0, EnemiesKilled = 0, Bounty = 1;
     // Start is called before the first frame update
     void Start()
     {
