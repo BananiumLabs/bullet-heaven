@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7523179501481749733}
   - component: {fileID: 7523179501481749735}
   - component: {fileID: 7523179501481749734}
+  - component: {fileID: 7767003389417630040}
   m_Layer: 0
   m_Name: Vorpal
   m_TagString: Enemy
@@ -97,6 +98,7 @@ MonoBehaviour:
   target: {fileID: 908304847897594941, guid: cfc7949a1ebf7724b935ae043ed089a2, type: 3}
   speed: 2
   health: 1
+  anim: {fileID: 7400000, guid: 0e61b59baf6c0af48ae534ec86874cbe, type: 2}
 --- !u!61 &7523179501481749735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +146,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &7767003389417630040
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523179501481749730}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50975bba79a4947409dcb470198719d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7709196852678172284}
   - component: {fileID: 7709196852678172287}
   - component: {fileID: -5725108611509867191}
+  - component: {fileID: 5106512572030119220}
   m_Layer: 0
   m_Name: Shell
   m_TagString: Enemy
@@ -98,6 +99,7 @@ MonoBehaviour:
   target: {fileID: 908304847897594941, guid: cfc7949a1ebf7724b935ae043ed089a2, type: 3}
   speed: 2
   health: 1
+  anim: {fileID: 7400000, guid: e9e64367af605b34fa9bb34b65595d4a, type: 2}
 --- !u!61 &7709196852678172284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,3 +161,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellExplosion: {fileID: 6199458260973952803, guid: 83acfc4cec560e040a40f1d82722f30e,
     type: 3}
+--- !u!95 &5106512572030119220
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709196852678172283}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42a0b2168482658459d7e8fc2cb23968, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

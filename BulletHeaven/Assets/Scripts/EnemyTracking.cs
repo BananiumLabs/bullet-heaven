@@ -8,6 +8,8 @@ public class EnemyTracking : MonoBehaviour
     public  GameObject target;
     public float speed;
     public int health;
+
+    public AnimationClip anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +29,7 @@ public class EnemyTracking : MonoBehaviour
         if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Explosion")
             health--;
         if(health == 0){
-            ScoreCounter.Score+=(ScoreCounter.Bounty * 100);
-            ScoreCounter.EnemiesKilled++;
-            Destroy(gameObject);
+            StartCoroutine(Die());
         }
         
     }
@@ -40,12 +40,20 @@ public class EnemyTracking : MonoBehaviour
         if(other.gameObject.tag == "Halo")
             health--;
         if(health == 0){
-            ScoreCounter.Score+=(ScoreCounter.Bounty * 100);
-            ScoreCounter.EnemiesKilled++;
-            Destroy(gameObject);
+            StartCoroutine(Die());
             //ScoreCounter.Score+=100;
         }
         
+    }
+
+    private IEnumerator Die(){
+        speed = 0;
+        GetComponent<Animator>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = false;
+        ScoreCounter.Score+=(ScoreCounter.Bounty * 100);
+        ScoreCounter.EnemiesKilled++;
+        yield return new WaitForSeconds(anim.length);
+        Destroy(gameObject);
     }
 
 }

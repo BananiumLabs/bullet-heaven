@@ -15,7 +15,7 @@ public class PlayerSpin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.J) || Input.GetKey("joystick button 2")) {
+        if(Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.K) || Input.GetKey("joystick button 2")) {
             transform.Rotate(Vector3.forward * speedRotate * Time.deltaTime);
             anim.enabled=true;
         }

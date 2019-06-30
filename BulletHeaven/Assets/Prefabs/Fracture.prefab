@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6976341580484045266}
   - component: {fileID: 6976341580484045264}
   - component: {fileID: 6976341580484045265}
+  - component: {fileID: -2771965797801698549}
   m_Layer: 0
   m_Name: Fracture
   m_TagString: Enemy
@@ -94,9 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61be5c7c21c6154dba5f819a04fe382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 908304847897594941, guid: cfc7949a1ebf7724b935ae043ed089a2, type: 3}
   speed: 3
   health: 1
+  anim: {fileID: 7400000, guid: 4057c22908e2e4f45bd178c9e8cec8d1, type: 2}
 --- !u!61 &6976341580484045264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +146,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &-2771965797801698549
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976341580484045269}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd477dbe1b28d3d45a85e3b89b168c1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
