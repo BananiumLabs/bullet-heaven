@@ -146,4 +146,11 @@ public class ScoreCounter : MonoBehaviour {
             previousHalos = halos;
         }
     }
+
+    public static void ResetValues () {
+        Score = 0;
+        EnemiesKilled = 0;
+        Bounty = 1;
+        TimeElapsed = 0;
+    }
 }

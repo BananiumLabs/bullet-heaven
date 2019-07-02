@@ -18,6 +18,8 @@ public class PubNubConnection : MonoBehaviour {
     public Text[] times;
     public Button SubmitButton;
     public InputField FieldUsername;
+
+    public GameObject HighScoreFields;
     // Use this for initialization
     void Start () {
         Button btn = SubmitButton.GetComponent<Button> ();
@@ -61,6 +63,11 @@ public class PubNubConnection : MonoBehaviour {
                     scores[i].text = strScores[i];
                     times[i].text = strTimes[i];
                 }
+
+                // Hide submit stuff if score not high enough
+                if (ScoreCounter.Score <= int.Parse (strScores[4]))
+                    HighScoreFields.SetActive (false);
+
             }
             if (mea.PresenceEventResult != null) {
                 Debug.Log ("In Example, SusbcribeCallback in presence" + mea.PresenceEventResult.Channel + mea.PresenceEventResult.Occupancy + mea.PresenceEventResult.Event);
@@ -80,11 +87,11 @@ public class PubNubConnection : MonoBehaviour {
         myObject.username = FieldUsername.text;
         myObject.score = "" + ScoreCounter.Score;
 
-        string minutes = Mathf.Floor (ScoreCounter.TimeElapsed/ 60).ToString ("00");
-        string seconds = (ScoreCounter.TimeElapsed% 60).ToString ("00");
+        string minutes = Mathf.Floor (ScoreCounter.TimeElapsed / 60).ToString ("00");
+        string seconds = (ScoreCounter.TimeElapsed % 60).ToString ("00");
 
         myObject.time = minutes + ":" + seconds;
-        
+
         string json = JsonUtility.ToJson (myObject);
         pubnub.Publish ()
             .Channel ("my_channel")
@@ -92,6 +99,7 @@ public class PubNubConnection : MonoBehaviour {
             .Async ((result, status) => {
                 if (!status.Error) {
                     Debug.Log (string.Format ("Publish Timetoken: {0}", result.Timetoken));
+                    HighScoreFields.SetActive (false);
                 } else {
                     Debug.Log (status.Error);
                     Debug.Log (status.ErrorData.Info);
