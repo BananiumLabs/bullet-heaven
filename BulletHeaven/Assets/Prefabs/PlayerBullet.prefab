@@ -146,6 +146,8 @@ MonoBehaviour:
   thrust: 0.05
   BulletDie: {fileID: -7389536036839784513}
   anim: {fileID: 7400000, guid: d64439ec1a0a14340bf52394b11f3d87, type: 2}
+  durability: 1
+  wallTilDead: 0
 --- !u!95 &5383320827632149141
 Animator:
   serializedVersion: 3

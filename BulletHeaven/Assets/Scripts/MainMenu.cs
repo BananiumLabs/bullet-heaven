@@ -24,6 +24,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
+        ScoreCounter.ResetValues();
         StartCoroutine(FadeImages());
     }
 

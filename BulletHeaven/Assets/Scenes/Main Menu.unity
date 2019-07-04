@@ -566,6 +566,101 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 260a09ebbe74d9d41a501032ca6b4e47,
         type: 3}
+    - target: {fileID: 7469379097970603178, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -10.099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379097970603178, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 209.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098924152539, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -55.19999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098924152539, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 210.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379097786146806, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 94.6998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379099777089450, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 121.1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379099397612291, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 147.7998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098422338030, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 175.6998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098670027199, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 202.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379097729610777, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098017697655, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098145708448, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098315730811, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098324441020, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098367595918, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379098771377543, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379099531906611, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379099569059312, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469379099722789169, guid: 7d3776fea72870bf48bf7e90fa2e5585,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3776fea72870bf48bf7e90fa2e5585, type: 3}
 --- !u!1 &9078032216937925873 stripped
