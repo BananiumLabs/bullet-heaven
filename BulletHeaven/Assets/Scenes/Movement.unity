@@ -4468,7 +4468,7 @@ PrefabInstance:
     - target: {fileID: 5317697645348460103, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 908304847574942859, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
@@ -4478,7 +4478,17 @@ PrefabInstance:
     - target: {fileID: 3540151655527569518, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392341955852241571, guid: cfc7949a1ebf7724b935ae043ed089a2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629340335292628438, guid: cfc7949a1ebf7724b935ae043ed089a2,
+        type: 3}
+      propertyPath: timeBtwnBullets
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc7949a1ebf7724b935ae043ed089a2, type: 3}
