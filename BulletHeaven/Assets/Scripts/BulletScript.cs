@@ -11,6 +11,9 @@ public class BulletScript : MonoBehaviour
     public float thrust;
     public AudioSource BulletDie;
     public AnimationClip anim;
+    public int durability;
+    public int hitCount;
+    public bool wallTilDead;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class BulletScript : MonoBehaviour
         trans = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         collided = false;
+        hitCount = 0;
     }
 
     // Update is called once per frame
@@ -30,13 +34,24 @@ public class BulletScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) 
     {
         Debug.Log("Collision Detected");
-        if(collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy") {
+        if(!wallTilDead)
+        {
+            hitCount++;
+            if((collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy") && (durability <= hitCount)) {
+                collided=true;
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                StartCoroutine(Die());
+                //GetComponent<Animator>().enabled = true;
+                //Destroy(gameObject);
+            }
+        }
+        else if(collision.gameObject.tag == "Wall")
+        {
             collided=true;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            GetComponent<Rigidbody2D>().angularVelocity = 0f;
-            StartCoroutine(Die());
-            //GetComponent<Animator>().enabled = true;
-            //Destroy(gameObject);
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                StartCoroutine(Die());
         }
     }
 

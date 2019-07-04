@@ -37,19 +37,19 @@ public class SpawnScript : MonoBehaviour {
     }
 
     public void Spawn (int enemy) {
-        if (enemy == 1) {
+        if (enemy == (int) MasterSpawner.Enemies.Vorpal) {
             GameObject Vorp = Instantiate (Vorpal, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Vorp, vorpalSprite));
         }
-        if (enemy == 2) {
+        if (enemy == (int) MasterSpawner.Enemies.Shell) {
             GameObject Shel = Instantiate (Shell, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Shel, shellSprite));
         }
-        if (enemy == 3) {
+        if (enemy == (int) MasterSpawner.Enemies.Lurker) {
             GameObject Lurk = Instantiate (Lurker, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Lurk, lurkerSprite));
         }
-        if (enemy == 4) {
+        if (enemy == (int) MasterSpawner.Enemies.Fracture) {
             GameObject Frac = Instantiate (Fracture, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Frac, fractureSprite));
         }
