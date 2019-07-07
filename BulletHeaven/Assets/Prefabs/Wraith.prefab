@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3875299492574630616}
   - component: {fileID: 3875299492574630615}
   - component: {fileID: 3875299492574630614}
+  - component: {fileID: 1952424450}
+  - component: {fileID: 1952424444}
   m_Layer: 0
   m_Name: Wraith
   m_TagString: Enemy
@@ -95,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2
+  speed: 5
   health: 1
+  anim: {fileID: 7400000, guid: 2d3501716422465409eb74a01b6cab89, type: 2}
 --- !u!61 &3875299492574630615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +147,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1952424450
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875299492574630613}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 292912718e75ee1cfb965b7c4283524d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1952424444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875299492574630613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f727918efaaf048a4e94b510dbae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2.5

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpawnScript : MonoBehaviour {
     //private int rand;
-    public GameObject player, Vorpal, Shell, Lurker, Fracture;
+    public GameObject player, Vorpal, Shell, Lurker, Wraith, Fracture;
 
-    public Sprite vorpalSprite, shellSprite, lurkerSprite, fractureSprite;
+    public Sprite vorpalSprite, shellSprite, lurkerSprite, wraithSprite, fractureSprite;
 
     //public float nextSpawn;
     //public float spawnRate;
@@ -49,10 +49,14 @@ public class SpawnScript : MonoBehaviour {
             GameObject Lurk = Instantiate (Lurker, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Lurk, lurkerSprite));
         }
-        if (enemy == (int) MasterSpawner.Enemies.Fracture) {
-            GameObject Frac = Instantiate (Fracture, transform.position, transform.rotation) as GameObject;
-            StartCoroutine (Blink (1, Frac, fractureSprite));
+        if (enemy == (int) MasterSpawner.Enemies.Wraith) {
+            GameObject Wrai = Instantiate (Wraith, transform.position, transform.rotation) as GameObject;
+            StartCoroutine (Blink (1, Wrai, wraithSprite));
         }
+        // if (enemy == (int) MasterSpawner.Enemies.Fracture) {
+        //     GameObject Frac = Instantiate (Fracture, transform.position, transform.rotation) as GameObject;
+        //     StartCoroutine (Blink (1, Frac, fractureSprite));
+        // }
     }
 
     IEnumerator Blink (float seconds, GameObject obj, Sprite spawnSprite) {
