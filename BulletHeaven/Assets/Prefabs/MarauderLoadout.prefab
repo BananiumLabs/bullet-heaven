@@ -190,7 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Halo: {fileID: 0}
   nextHalo: 0
-  timeBtwnHalos: 0
+  timeBtwnHalos: 3
+  spawnDistance: 1
 --- !u!1 &5494183691102974986
 GameObject:
   m_ObjectHideFlags: 0
