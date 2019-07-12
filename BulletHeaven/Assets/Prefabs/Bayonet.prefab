@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5717acb0d71e1448841734f935df3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotate: 400
-  time: 1
+  speedRotate: 950
+  time: 0.4
   slash: {fileID: 4205084982398856755}
 --- !u!212 &8993166224268641566
 SpriteRenderer:

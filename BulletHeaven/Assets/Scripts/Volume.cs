@@ -11,16 +11,29 @@ public class Volume : MonoBehaviour {
     public Button[] musicButtons;
     public Button[] sfxButtons;
 
-    int currMusicLevel, currSfxLevel;
+    static int currMusicLevel = -1, currSfxLevel = -1;
 
     // Start is called before the first frame update
     void Start () {
         audioSources = Object.FindObjectsOfType<AudioSource> ();
         // print(audioSources);
-        currMusicLevel = 2;
-        currSfxLevel = 2;
-        OnClickMusic (3);
-        OnClickSfx (3);
+
+        if(currMusicLevel < 0) {
+            OnClickMusic(3);
+            OnClickSfx(3);
+        }
+        else {
+            currMusicLevel--;
+            currSfxLevel--;
+            OnClickMusic(currMusicLevel + 1);
+            OnClickSfx(currSfxLevel + 1);
+        }
+        musicSource.volume = 0.2f * currMusicLevel;
+        foreach (AudioSource audio in audioSources) {
+            if (audio.gameObject.name != "Music Source") {
+                audio.volume = 0.2f * currSfxLevel;
+            }
+        }
     }
 
     // Update is called once per frame
