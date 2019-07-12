@@ -25,8 +25,9 @@ public class BayonetSpawner : MonoBehaviour
                 {
                     nextBayonet = Time.time + timeBtwnBayonets;
                     GameObject halo = Instantiate(Bayonet, transform.position, transform.rotation) as GameObject;
-                    BayonetSource.Play();
+                    //BayonetSource.Play();
                     GameObject.Find("Player").GetComponent<PlayerHealth>().halos--;
+                    Debug.Log("HEY FUCKO" + GameObject.Find("Player").GetComponent<PlayerHealth>().halos);
                 }
 
             }

@@ -4265,7 +4265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040856433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6502e90f4aa0dc41aa74e85ad3db77e, type: 3}
   m_Name: 
@@ -4274,6 +4274,21 @@ MonoBehaviour:
   nextHalo: 0
   timeBtwnHalos: 3
   spawnDistance: 0
+--- !u!114 &2040856436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040856433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd54ab2ce57edce4f987bcb8d8098f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bayonet: {fileID: 4674257885493076541, guid: 81086b8a6e301c248bc44fc7dc74fa4a, type: 3}
+  nextBayonet: 0
+  timeBtwnBayonets: 3
 --- !u!1 &2120525815
 GameObject:
   m_ObjectHideFlags: 0
