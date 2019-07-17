@@ -6,7 +6,10 @@ using UnityEngine;
 public class MasterSpawner : MonoBehaviour {
     public float defaultSpawnRate;
 
-    public enum Enemies { Vorpal, Shell, Lurker, Wraith };
+    /// enable to skip the predefined rounds
+    public bool testMode = false;
+
+    public enum Enemies { Vorpal, Shell, Lurker, Wraith, Fracture };
 
  // Start is called before the first frame update
  void Start () {
@@ -16,47 +19,57 @@ public class MasterSpawner : MonoBehaviour {
     /// Defines all of the waves!!!
     IEnumerator MasterWaveController () {
 
-        StartCoroutine (SendWave (new List<int> () { 3 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 5 }, delay : 0.5f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 5 }, delay : 0f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 2, 2 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 0, 8 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 5, 5 }, delay : 0.5f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 1, 1, 5 }, delay : 0f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 15 }, delay : 0.25f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 5, 5, 5 }, delay : 0.5f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 5, 5, 5 }, delay : 0f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 0, 0, 0, 3 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 3, 0, 0, 3 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 0, 1, 2, 3 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
-        StartCoroutine (SendWave (new List<int> () { 3, 3, 3, 3 }, delay : 1f));
-        yield return new WaitForSeconds (defaultSpawnRate);
+        if(!testMode) {
+            StartCoroutine (SendWave (new List<int> () { 3 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 5 }, delay : 0.5f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 5 }, delay : 0f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 2, 2 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 0, 8 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 5, 5 }, delay : 0.5f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 1, 1, 5 }, delay : 0f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 15 }, delay : 0.25f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 5, 5, 5 }, delay : 0.5f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 5, 5, 5 }, delay : 0f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 0, 0, 0, 3 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 3, 0, 0, 3 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 0, 1, 2, 3 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 3, 3, 3, 3 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 0, 0, 0, 0, 5 }, delay : 1f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 2, 1, 3, 2, 5 }, delay : 0.5f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 0, 0, 0, 0, 10 }, delay : 0.25f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+            StartCoroutine (SendWave (new List<int> () { 3, 3, 3, 3, 3 }, delay : 0.75f));
+            yield return new WaitForSeconds (defaultSpawnRate);
+        }
 
         // Randomly generated waves when the predefined ones run out
-        int randomWaveCount = 4;
+        int randomWaveCount = 2;
         List<int> randomEnemies;
         while (true) {
             randomEnemies = new List<int> ();
 
-            for (int i = 0; i < Enemies.GetValues (typeof (Enemies)).Cast<int> ().Max (); i++) {
+            for (int i = 0; i < Enemies.GetValues (typeof (Enemies)).Cast<int> ().Max () + 1; i++) {
                 randomEnemies.Add (Random.Range (1, randomWaveCount * 2));
-                StartCoroutine (SendWave (randomEnemies, delay : 0.5f));
             }
-
-            randomWaveCount++;
+            
+            StartCoroutine (SendWave (randomEnemies, delay : 0.5f));
+            randomWaveCount+= Random.Range(0, 2);
             yield return new WaitForSeconds (defaultSpawnRate);
         }
     }

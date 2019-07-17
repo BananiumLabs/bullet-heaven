@@ -42,7 +42,7 @@ public class BulletSpawn : MonoBehaviour
                 //BulletSource.Play();
             }
 
-        } else if(Input.GetKey(KeyCode.K) || Input.GetKey("joystick button 2"))
+        } else if(Input.GetKey(KeyCode.K) || Input.GetKey("joystick button 0"))
         {
             transform.Rotate(Vector3.forward * speedRotate * Time.deltaTime);
             if (Time.time > nextFire)

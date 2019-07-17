@@ -53,10 +53,10 @@ public class SpawnScript : MonoBehaviour {
             GameObject Wrai = Instantiate (Wraith, transform.position, transform.rotation) as GameObject;
             StartCoroutine (Blink (1, Wrai, wraithSprite));
         }
-        // if (enemy == (int) MasterSpawner.Enemies.Fracture) {
-        //     GameObject Frac = Instantiate (Fracture, transform.position, transform.rotation) as GameObject;
-        //     StartCoroutine (Blink (1, Frac, fractureSprite));
-        // }
+        if (enemy == (int) MasterSpawner.Enemies.Fracture) {
+            GameObject Frac = Instantiate (Fracture, transform.position, transform.rotation) as GameObject;
+            StartCoroutine (Blink (1, Frac, fractureSprite));
+        }
     }
 
     IEnumerator Blink (float seconds, GameObject obj, Sprite spawnSprite) {

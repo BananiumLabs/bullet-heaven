@@ -21,7 +21,7 @@ public class HaloSpawner : MonoBehaviour
     {
         spawnPos = transform.position + (transform.up*spawnDistance);
         if(GameObject.Find("Player").GetComponent<PlayerHealth>().halos > 0) {
-            if(Input.GetKey(KeyCode.L) || Input.GetKey("joystick button 3")|| Input.GetKey("joystick button 0"))
+            if(Input.GetKey(KeyCode.L) || Input.GetKey("joystick button 3"))
             {
                 if (Time.time > nextHalo)
                 {
