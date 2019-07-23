@@ -14,5 +14,6 @@ public class RevealScript : MonoBehaviour
     void Update()
     {
         transform.position = GameObject.Find("Player").transform.position;
+        transform.rotation = new Quaternion(0f,0f,0f, 1);
     }   
 }

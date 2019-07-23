@@ -18,9 +18,9 @@ public class ScoreCounter : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Bounty = Mathf.Floor (EnemiesKilled / 10f) + 1f;
-        current.text = "CURRENT SCORE\n" + Score;
-        allTime.text = "ALL-TIME RECORD\n" + ((Score > GetHighScore.highScore) ? Score : GetHighScore.highScore);
-        bounty.text = "BOUNTY\n" + Bounty + "x";
+        current.text = "" + Score;
+        allTime.text = "" + ((Score > GetHighScore.highScore) ? Score : GetHighScore.highScore);
+        bounty.text = "x" + Bounty;
 
         health = GameObject.Find ("Player").GetComponent<PlayerHealth> ().health;
         halos = GameObject.Find ("Player").GetComponent<PlayerHealth> ().halos;
@@ -34,7 +34,7 @@ public class ScoreCounter : MonoBehaviour {
 
         string minutes = Mathf.Floor (TimeElapsed / 60).ToString ("00");
         string seconds = (TimeElapsed % 60).ToString ("00");
-        timer.text = "TIME ELAPSED: " + minutes + ":" + seconds;
+        timer.text = "" + minutes + ":" + seconds;
     }
     void healthChecker () {
         /*if(health == 0){

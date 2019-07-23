@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour {
     public int health;
     public int halos;
-    private bool invincibility;
+    public bool invincibility;
     public AudioSource hitSound;
     // Start is called before the first frame update
     void Start () {
