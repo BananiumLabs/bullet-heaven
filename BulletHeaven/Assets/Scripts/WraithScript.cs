@@ -30,7 +30,7 @@ public class WraithScript : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D collision) {
-        if (collision.gameObject.tag == "Bullet") {
+        if (collision.gameObject.tag == "Bullet" && !isGhost) {
             gameObject.SetActive (false);
         }
     }

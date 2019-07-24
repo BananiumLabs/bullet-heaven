@@ -4,7 +4,8 @@ using System.Linq;
 using UnityEngine;
 
 public class MasterSpawner : MonoBehaviour {
-    public float defaultSpawnRate;
+    public float defaultSpawnRate = 10f, testDelay = 0.25f;
+    public int testNumberToSpawn = 1;
 
     /// enable to skip the predefined rounds
     public bool testMode = false;
@@ -19,7 +20,7 @@ public class MasterSpawner : MonoBehaviour {
     /// Defines all of the waves!!!
     IEnumerator MasterWaveController () {
 
-        if(!testMode) {
+        if (!testMode) {
             StartCoroutine (SendWave (new List<int> () { 3 }, delay : 1f));
             yield return new WaitForSeconds (defaultSpawnRate);
             StartCoroutine (SendWave (new List<int> () { 5 }, delay : 0.5f));
@@ -56,22 +57,23 @@ public class MasterSpawner : MonoBehaviour {
             yield return new WaitForSeconds (defaultSpawnRate);
             StartCoroutine (SendWave (new List<int> () { 3, 3, 3, 3, 3 }, delay : 0.75f));
             yield return new WaitForSeconds (defaultSpawnRate);
-        }
 
-        // Randomly generated waves when the predefined ones run out
-        int randomWaveCount = 2;
-        List<int> randomEnemies;
-        while (true) {
-            randomEnemies = new List<int> ();
+            // Randomly generated waves when the predefined ones run out
+            int randomWaveCount = 2;
+            List<int> randomEnemies;
+            while (true) {
+                randomEnemies = new List<int> ();
 
-            for (int i = 0; i < Enemies.GetValues (typeof (Enemies)).Cast<int> ().Max () + 1; i++) {
-                randomEnemies.Add (Random.Range (1, randomWaveCount * 2));
+                for (int i = 0; i < Enemies.GetValues (typeof (Enemies)).Cast<int> ().Max () + 1; i++) {
+                    randomEnemies.Add (Random.Range (1, randomWaveCount * 2));
+                }
+
+                StartCoroutine (SendWave (randomEnemies, delay : 0.5f));
+                randomWaveCount += Random.Range (0, 2);
+                yield return new WaitForSeconds (defaultSpawnRate);
             }
-            
-            StartCoroutine (SendWave (randomEnemies, delay : 0.5f));
-            randomWaveCount+= Random.Range(0, 2);
-            yield return new WaitForSeconds (defaultSpawnRate);
         }
+
     }
 
     /// Sends a single wave of enemies at the player.
@@ -102,5 +104,9 @@ public class MasterSpawner : MonoBehaviour {
         } while ((nonZeroIndices.Count > 0));
 
         yield return null;
+    }
+
+    public void ManualSpawn (List<int> enemies) {
+        StartCoroutine (SendWave (enemies, testDelay));
     }
 }

@@ -46,7 +46,7 @@ public class SniperBulletSpawn : MonoBehaviour
                 }
             }
 
-        } else if(Input.GetKey(KeyCode.K) || Input.GetKey("joystick button 2"))
+        } else if(Input.GetKey(KeyCode.J) || Input.GetKey("joystick button 2"))
         {
             transform.Rotate(Vector3.forward * speedRotate * Time.deltaTime);
             if (Time.time > nextFire)
