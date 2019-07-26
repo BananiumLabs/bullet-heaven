@@ -4208,14 +4208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f95d00930cbcb47ac703055d1e1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canDash: 0
-  direction: 0
-  dashtime: 2
-  startDashTime: 0.1
-  dashSpeed: 100
-  timeBetweenDashes: 1
-  rb: {fileID: 0}
-  healthObj: {fileID: 0}
 --- !u!82 &1877301041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4995,7 +4987,7 @@ PrefabInstance:
     - target: {fileID: 908304847897594928, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: dashSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 908304847897594928, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
