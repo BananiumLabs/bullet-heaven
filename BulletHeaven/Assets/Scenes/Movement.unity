@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSpawnRate: 10
   testDelay: 0.25
-  testNumberToSpawn: 1
+  testNumberToSpawn: 5
   testMode: 1
 --- !u!4 &206692774
 Transform:
@@ -4208,10 +4208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f95d00930cbcb47ac703055d1e1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDash: 0
+  direction: 0
   dashtime: 2
   startDashTime: 0.1
   dashSpeed: 100
   timeBetweenDashes: 1
+  rb: {fileID: 0}
+  healthObj: {fileID: 0}
 --- !u!82 &1877301041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5003,6 +5007,16 @@ PrefabInstance:
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 908304847897594928, guid: cfc7949a1ebf7724b935ae043ed089a2,
+        type: 3}
+      propertyPath: startDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 908304847897594928, guid: cfc7949a1ebf7724b935ae043ed089a2,
+        type: 3}
+      propertyPath: timeBetweenDashes
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 908304847897594931, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: m_Enabled
@@ -5037,7 +5051,7 @@ PrefabInstance:
     - target: {fileID: 5317697645348460103, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5317697645348460103, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
@@ -5057,7 +5071,7 @@ PrefabInstance:
     - target: {fileID: 3540151655527569518, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3540151655527569518, guid: cfc7949a1ebf7724b935ae043ed089a2,
         type: 3}

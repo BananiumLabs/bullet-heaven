@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ab5497d6dc27144b8ea9516945b8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBtwnBullets: 1.5
+  timeBtwnBullets: 1
   bulletPrefab: {fileID: 1019319431649834481, guid: 6bc10759c5c00fc479768119dcf1fb36,
     type: 3}
   speedRotate: 160

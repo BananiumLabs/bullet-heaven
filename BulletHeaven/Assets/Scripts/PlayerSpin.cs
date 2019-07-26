@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSpin : MonoBehaviour
 {
     public float speedRotate;
-    private Animator anim;
+    private Animator anim;  
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class PlayerSpin : MonoBehaviour
         if(Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.K) || Input.GetKey("joystick button 2")) {
             transform.Rotate(Vector3.forward * speedRotate * Time.deltaTime);
             anim.enabled=true;
+            //anim.Play("PlayerSpin");
         }
         else
             anim.enabled=false;

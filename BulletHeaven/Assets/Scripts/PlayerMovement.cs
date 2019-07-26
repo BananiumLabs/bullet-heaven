@@ -2,150 +2,94 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+/// Handles direction input as well as dashing.
+public class PlayerMovement : MonoBehaviour {
     public float speed;
     private Rigidbody2D rb;
     private BoxCollider2D bc;
+    private PlayerHealth healthObj;
     private Vector2 moveVelocity;
     private Vector2 moveInput;
-    public float dashStrength;
-    private float dashtime;
+
+    private bool canDash;
     private int direction;
+    public float dashtime;
     public float startDashTime;
     public float dashSpeed;
-    private float dash;
-    private float nextDash;
-    public float timeBtwnDash;
-    private bool dashDown;
-    public GameObject dashEffect;
+
+    /// Time, in seconds, for dash cooldown
+    public float timeBetweenDashes = 1f;
+    // public GameObject dashEffect; REENABLE WHEN DASH EFFECT COMPLETED
 
     // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        bc = GetComponent<BoxCollider2D>();
-        direction = 0;
+    void Start () {
+        rb = GetComponent<Rigidbody2D> ();
+        bc = GetComponent<BoxCollider2D> ();
+        healthObj = GetComponent<PlayerHealth> ();
         dashtime = startDashTime;
-        dash = 1;
-        nextDash = 0;
-        dashDown = false;
+        direction = 0;
+        canDash = true;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        
-        moveVelocity = moveInput.normalized * speed;
-        /* if(Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown("joystick button 4") || Input.GetKeyDown("joystick button 5"))
-            dashDown=true;
-        else
-            dashDown=false;
-        if(!dashDown)*/
+    void Update () {
 
-        rb.MovePosition(rb.position + moveVelocity * dash * Time.fixedDeltaTime);
-        /*if(Input.GetKeyDown(KeyCode.LeftShift) || dashDown || Input.GetKeyDown("joystick button 4") || Input.GetKeyDown("joystick button 5"))
-        {
-            if (Time.time > nextDash)
-            {
-                dashDown = true;
-                nextDash = Time.time + timeBtwnDash;
-                dash = dashSpeed;
-            }
-            else
-            {
-                dashDown = false;
-                dash = 1;
-            }
-        }*/
-    }
-
-    void FixedUpdate()
-    {
-        //if(!dash)
-            /* if(dash > 1)
-            {
-                Instantiate(dashEffect, transform.position, Quaternion.identity);
-                bc.enabled = false;
-                rb.MovePosition(rb.position + moveVelocity * dash * Time.fixedDeltaTime);
-                bc.enabled = true;
-                Instantiate(dashEffect, transform.position, Quaternion.identity);
-            }
-            else
-                rb.MovePosition(rb.position + moveVelocity * dash * Time.fixedDeltaTime);*/
-            
-        
-    }
-
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            dash = true;
-            if (direction == 0){
-                if (Input.GetKeyDown(KeyCode.A)){
+        // Dash input check
+        if (Input.GetKey (KeyCode.Space) || Input.GetKey (KeyCode.JoystickButton4) || Input.GetKey (KeyCode.JoystickButton5)) { // Space, LeftBumper, RightBumper
+            if (canDash) {
+                if ((Mathf.Abs (Input.GetAxis ("Horizontal")) > Mathf.Abs (Input.GetAxis ("Vertical"))) && (Input.GetAxis ("Horizontal") < 0)) { //left
                     direction = 1;
-                } else if (Input.GetKeyDown(KeyCode.D)){
+                } else if ((Mathf.Abs (Input.GetAxis ("Horizontal")) > Mathf.Abs (Input.GetAxis ("Vertical"))) && (Input.GetAxis ("Horizontal") > 0)) { //right
                     direction = 2;
-                } else if (Input.GetKeyDown(KeyCode.W)){
+                } else if ((Mathf.Abs (Input.GetAxis ("Horizontal")) < Mathf.Abs (Input.GetAxis ("Vertical"))) && (Input.GetAxis ("Vertical") > 0)) { //up
                     direction = 3;
-                } else if (Input.GetKeyDown(KeyCode.S)){
+                } else if ((Mathf.Abs (Input.GetAxis ("Horizontal")) < Mathf.Abs (Input.GetAxis ("Vertical"))) && (Input.GetAxis ("Vertical") < 0)) { //down
                     direction = 4;
                 }
 
-            } else {
-                if(dashtime <= 0){
-                    direction = 0;
-                    dashtime = startDashTime;
-                    rb.velocity = Vector2.zero;
-                    dash = false;
-                } else {
-                    dashtime -= Time.deltaTime;
-
-                    if(direction == 1){
-                        rb.velocity = Vector2.left * dashSpeed;
-                    } else if (direction == 2){
-                        rb.velocity = Vector2.right * dashSpeed;
-                    } else if (direction == 3){
-                        rb.velocity = Vector2.up * dashSpeed;
-                    } else if (direction == 4){
-                        rb.velocity = Vector2.down * dashSpeed;
-                    }
-                }
+                if (direction != 0)
+                    StartCoroutine (Dash ());
             }
         }
-        */
 
-        /* void OnCollision2DEnter(Collision collision) 
- {
-         if(collision.gameObject.name == "YourWallName")  // or if(gameObject.CompareTag("YourWallTag"))
-         {
-                     GetComponent<Rigidbody>().velocity = Vector3.zero;
-         }
- }*/
+        moveInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+
+        moveVelocity = moveInput.normalized * speed;
+        
+        if(direction == 0)
+            rb.MovePosition (rb.position + moveVelocity * Time.fixedDeltaTime);
+
+    }
+
+    /// Assumes that player can dash. Do checking in update()
+    IEnumerator Dash () {
+
+        canDash = false;
+
+        healthObj.invincibility = true;
+
+        switch (direction) {
+            case 1:
+                rb.velocity = Vector2.left * dashSpeed;
+                break;
+            case 2:
+                rb.velocity = Vector2.right * dashSpeed;
+                break;
+            case 3:
+                rb.velocity = Vector2.up * dashSpeed;
+                break;
+            case 4:
+                rb.velocity = Vector2.down * dashSpeed;
+                break;
+        }
+
+        yield return new WaitForSeconds (dashtime);
+
+        direction = 0;
+        dashtime = startDashTime;
+        rb.velocity = Vector2.zero;
+        healthObj.invincibility = false;
+        yield return new WaitForSeconds (timeBetweenDashes);
+        canDash = true;
+    }
+}
