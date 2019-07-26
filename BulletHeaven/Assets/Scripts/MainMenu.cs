@@ -45,6 +45,10 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene (0);
     }
 
+    public void GoToRankings () {
+        SceneManager.LoadScene (2);
+    }
+
     public void ToggleHelp () {
         GameObject.Find ("Help Canvas").GetComponent<Canvas> ().enabled = !GameObject.Find ("Help Canvas").GetComponent<Canvas> ().enabled;
     }
